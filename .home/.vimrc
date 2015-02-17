@@ -20,5 +20,4 @@ set noswapfile
 
 cmap w!! w !sudo tee % >/dev/null
 
-autocmd FileType go compiler go
-autocmd FileType go autocmd BufWritePre <buffer> Fmt
+let g:go_fmt_autosave=1
