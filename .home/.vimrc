@@ -25,6 +25,8 @@ set tabpagemax=50
 
 nmap j gj
 nmap k gk
+
+let g:tern_map_keys = 1
 function! CommendUncommend()
      if match(getline('.'),"<!--") == -1
        echom "Commend"
