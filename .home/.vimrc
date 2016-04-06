@@ -38,7 +38,7 @@ function! CommendUncommend()
 endfunction
 
 set showcmd     " Show (partial) command in status line.
-set showmatch   " Show matching brackets.
+" set showmatch   " Show matching brackets.
 set incsearch
 set ignorecase
 set smartcase
