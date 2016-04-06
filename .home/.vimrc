@@ -1,3 +1,4 @@
+" --------------------------------------------------------------------
 " From debian.vim to make it more cross distro
 
 " Normally we use vim-extensions. If you want true vi-compatibility
@@ -13,20 +14,26 @@ set ruler		" show the cursor position all the time
 " vulnerabilities -- disable by default, even when 'nocompatible' is set
 set nomodeline
 
+" --------------------------------------------------------------------
+
 execute pathogen#infect()
+
 syntax on
 filetype plugin indent on
-set number
-colorscheme darkblue
-set expandtab ts=4 sw=4 ai
-let mapleader = ","
 
+colorscheme darkblue
+
+set number
+set expandtab ts=4 sw=4 ai
 set tabpagemax=50
 
-nmap j gj
-nmap k gk
+let mapleader = ","
+let maplocalleader = ","
 
 let g:tern_map_keys = 1
+
+let g:go_fmt_autosave=1
+
 function! CommendUncommend()
      if match(getline('.'),"<!--") == -1
        echom "Commend"
@@ -39,18 +46,20 @@ function! CommendUncommend()
      endif
 endfunction
 
+nmap j gj
+nmap k gk
+nmap <Leader>q :nohlsearch<CR>
+nmap <Leader>hc :call CommendUncommend()<CR>
+nmap <Leader>x :Lexplore<CR>
+imap <C-O> <C-X><C-O>
+cmap w!! w !sudo tee % >/dev/null
+
 set showcmd     " Show (partial) command in status line.
 " set showmatch   " Show matching brackets.
 set incsearch
 set ignorecase
 set smartcase
 set hlsearch
-nmap <Leader>q :nohlsearch<CR>
-nmap <Leader>hc :call CommendUncommend()<CR>
 set hidden
 set nobackup
 set dir=~/tmp/vim
-
-cmap w!! w !sudo tee % >/dev/null
-
-let g:go_fmt_autosave=1
