@@ -55,7 +55,7 @@ imap <C-O> <C-X><C-O>
 cmap w!! w !sudo tee % >/dev/null
 
 set showcmd     " Show (partial) command in status line.
-" set showmatch   " Show matching brackets.
+set showmatch   " Show matching brackets.
 set incsearch
 set ignorecase
 set smartcase
