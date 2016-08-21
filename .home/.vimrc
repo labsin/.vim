@@ -32,7 +32,15 @@ let maplocalleader = ","
 
 let g:tern_map_keys = 1
 
+" Go plugin
 let g:go_fmt_autosave=1
+
+" vim-template plugin
+let g:templates_directory="~/.vim/templates"
+let g:templates_no_builtin_templates=1
+let g:username="Sam Segers"
+let g:email=$EMAIL
+let g:license="The Unlicense"
 
 function! CommendUncommend()
      if match(getline('.'),"<!--") == -1
