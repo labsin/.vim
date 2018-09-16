@@ -33,6 +33,7 @@ let maplocalleader = ","
 let g:tern_map_keys = 1
 
 " Go plugin
+let g:go_version_warning = 0
 let g:go_fmt_autosave=1
 
 " vim-template plugin
